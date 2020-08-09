@@ -1,0 +1,21 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #000;
+}
+
+.login img {
+  width: 25%;
+}
+
+.login a {
+  padding: 20px;
+  background-color: #1db954;
+  border-radius: 100px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
