@@ -1,9 +1,10 @@
-import { TEST } from "../types";
+import { SET_USER } from "./types";
 
-const testStart = () => {
+const setUser = (user) => {
   return {
-    type: TEST,
+    type: SET_USER,
+    user,
   };
 };
 
-export { testStart };
+export { setUser };

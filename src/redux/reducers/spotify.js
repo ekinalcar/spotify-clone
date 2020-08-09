@@ -1,6 +1,5 @@
 import produce from "immer";
-
-import { TEST } from "../actions/types";
+import { SET_USER } from "../actions/types";
 
 const initialState = {
   user: null,
@@ -9,13 +8,14 @@ const initialState = {
   item: null,
 };
 
-const sensor = produce((draft, action) => {
+const spotify = produce((draft, action) => {
   const { type } = action;
-  if (type === TEST) {
-    draft.data = ["GELDIK"];
+  if (type === SET_USER) {
+    const { user } = action;
+    draft.user = user;
     return;
   }
   return draft;
 }, initialState);
 
-export default sensor;
+export default spotify;
