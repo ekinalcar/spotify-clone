@@ -1,5 +1,5 @@
 import produce from "immer";
-import { SET_USER, SET_TOKEN } from "../actions/types";
+import { SET_USER, SET_TOKEN, SET_PLAYLISTS } from "../actions/types";
 
 const initialState = {
   user: null,
@@ -20,6 +20,11 @@ const spotify = produce((draft, action) => {
   if (type === SET_TOKEN) {
     const { token } = action;
     draft.token = token;
+    return;
+  }
+  if (type === SET_PLAYLISTS) {
+    const { playlists } = action;
+    draft.playlists = playlists;
     return;
   }
   return draft;

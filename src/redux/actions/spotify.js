@@ -1,4 +1,4 @@
-import { SET_USER, SET_TOKEN } from "./types";
+import { SET_USER, SET_TOKEN, SET_PLAYLISTS } from "./types";
 
 const setUser = (user) => {
   return {
@@ -14,4 +14,11 @@ const setToken = (token) => {
   };
 };
 
-export { setUser, setToken };
+const setPlaylists = (playlists) => {
+  return {
+    type: SET_PLAYLISTS,
+    playlists,
+  };
+};
+
+export { setUser, setToken, setPlaylists };

@@ -4,7 +4,7 @@ import SpotifyWebApi from "spotify-web-api-js";
 import { useSelector, useDispatch } from "react-redux";
 import { getTokenFromResponse } from "./utils/spotify";
 
-import { setUser, setToken } from "./redux/actions/spotify";
+import { setUser, setToken, setPlaylists } from "./redux/actions/spotify";
 
 import Login from "./components/Login/";
 import Player from "./components/Player";
@@ -26,6 +26,10 @@ const App = () => {
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => {
         dispatch(setUser(user));
+      });
+
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch(setPlaylists(playlists));
       });
     }
   }, [dispatch]);
