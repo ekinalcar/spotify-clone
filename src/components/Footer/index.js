@@ -16,7 +16,10 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer_left">
-        <img className="footer_albumLogo" />
+        <img
+          className="footer_albumLogo"
+          src="https://i.scdn.co/image/ab67706f00000003c9be450d7ffabc47248bb8bd"
+        />
         <div className="footer_songInfo">
           <h4>No song is playing</h4>
           <p>...</p>

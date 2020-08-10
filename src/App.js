@@ -4,7 +4,12 @@ import SpotifyWebApi from "spotify-web-api-js";
 import { useSelector, useDispatch } from "react-redux";
 import { getTokenFromResponse } from "./utils/spotify";
 
-import { setUser, setToken, setPlaylists } from "./redux/actions/spotify";
+import {
+  setUser,
+  setToken,
+  setPlaylists,
+  setDiscoverWeekly,
+} from "./redux/actions/spotify";
 
 import Login from "./components/Login/";
 import Player from "./components/Player";
@@ -30,6 +35,10 @@ const App = () => {
 
       spotify.getUserPlaylists().then((playlists) => {
         dispatch(setPlaylists(playlists));
+      });
+
+      spotify.getPlaylist("37i9dQZF1DWZoYjOY9rbZB").then((response) => {
+        dispatch(setDiscoverWeekly(response));
       });
     }
   }, [dispatch]);

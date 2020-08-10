@@ -10,7 +10,7 @@ import "./index.css";
 
 const Sidebar = () => {
   const { playlists } = useSelector((state) => state.spotify);
-  console.log(playlists);
+
   return (
     <div className="sidebar">
       <img

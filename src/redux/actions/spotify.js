@@ -1,4 +1,9 @@
-import { SET_USER, SET_TOKEN, SET_PLAYLISTS } from "./types";
+import {
+  SET_USER,
+  SET_TOKEN,
+  SET_PLAYLISTS,
+  SET_DISCOVER_WEEKLY,
+} from "./types";
 
 const setUser = (user) => {
   return {
@@ -21,4 +26,11 @@ const setPlaylists = (playlists) => {
   };
 };
 
-export { setUser, setToken, setPlaylists };
+const setDiscoverWeekly = (discoverWeekly) => {
+  return {
+    type: SET_DISCOVER_WEEKLY,
+    discoverWeekly,
+  };
+};
+
+export { setUser, setToken, setPlaylists, setDiscoverWeekly };
