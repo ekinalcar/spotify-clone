@@ -43,7 +43,7 @@ const App = () => {
     }
   }, [dispatch]);
 
-  return <div className="app">{token ? <Player spotify /> : <Login />}</div>;
+  return <div className="app">{token ? <Player /> : <Login />}</div>;
 };
 
 export default App;

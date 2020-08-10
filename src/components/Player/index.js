@@ -5,12 +5,12 @@ import Footer from "../Footer";
 
 import "./index.css";
 
-const Player = ({ spotify }) => {
+const Player = () => {
   return (
     <div className="player">
       <div className="player_body">
         <Sidebar />
-        <Body spotfiy={spotify} />
+        <Body />
       </div>
       <Footer />
     </div>
