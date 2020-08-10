@@ -1,4 +1,4 @@
-import { SET_USER } from "./types";
+import { SET_USER, SET_TOKEN } from "./types";
 
 const setUser = (user) => {
   return {
@@ -7,4 +7,11 @@ const setUser = (user) => {
   };
 };
 
-export { setUser };
+const setToken = (token) => {
+  return {
+    type: SET_TOKEN,
+    token,
+  };
+};
+
+export { setUser, setToken };
